@@ -1,8 +1,5 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 import time
 
@@ -11,13 +8,6 @@ from pages.dlya_doma_page import DlyaDomaPage
 from pages.pylesosy_page import PylesosyPage
 from pages.dyson_v12s_page import DysonV12SPage
 from pages.cart_page import CartPage
-
-
-# from pages.final_page import FinalPage
-# from pages.login_page import LoginPage
-# from pages.cart_page import CartPage
-# from pages.client_info_page import ClientInfoPage
-# from pages.check_out_page import CheckOutPage
 
 def test_buy_product():
     options = webdriver.ChromeOptions()
@@ -52,15 +42,6 @@ def test_buy_product():
     cart_page.initial_check()
     cart_page.check_product_name()
     cart_page.check_price()
-
-    # client_info_page = ClientInfoPage(driver)
-    # client_info_page.input_client_info()
-    #
-    # check_out_page = CheckOutPage(driver)
-    # check_out_page.order_confirmation()
-    #
-    # final_page = FinalPage(driver)
-    # final_page.final_step()
 
     """Закрытие браузера"""
     time.sleep(5)
