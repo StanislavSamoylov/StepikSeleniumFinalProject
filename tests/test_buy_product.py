@@ -42,6 +42,7 @@ def test_buy_product():
     cart_page.initial_check()
     cart_page.check_product_name()
     cart_page.check_price()
+    cart_page.final_step()
 
     """Закрытие браузера"""
     time.sleep(5)

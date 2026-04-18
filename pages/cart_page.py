@@ -34,3 +34,5 @@ class CartPage(BaseClass):
         cp_price_str = self.get_products_price().text.split('\n')[1]
         cp_price_num = self.convert_price_to_number(cp_price_str) # попробовать по индексу передать нужную часть внутрь функции или сделать более универсальной базовую
         self.assert_price(cp_price_num, 47990)
+    def final_step(self):
+        self.take_screenshot()
